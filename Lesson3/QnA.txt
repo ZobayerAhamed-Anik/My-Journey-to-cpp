@@ -1,33 +1,208 @@
-1.  What is RAM?
-Ans: RAM (Random Access Memory) is a computer memory to store data for the programme to run.
 
-2.  What is a variable?
-Ans: variable is a named place in the memory to store a specific type of data.
 
-3.  Why do we use variables instead of writing values directly?
-Ans: We use variables instead of writing values directly to avoid writing same instruction for different data values.
+# C++ Lesson 3 Revision Notes
 
-4.  Explain the difference between declaration, assignment, and initialization.
-Ans: Declaration is the part where we declare which type of data we are going to store. Initialization is the part where we name the variable after declaration. Assignment is the part where we assign or give a supported value to that variable.
+## Variables and Memory
 
-5.  Why is x = x + 1 valid in programming but not in mathematics?
-Ans: Yes, it is. Used to increase the previous value by adding 1.
+### 1. What is RAM?
 
-6.  What is the difference between char and double?
-Ans: 'char' is a character data type which is used to store a single character while double is a datatype to store any number(int/float).
+**Answer:**
+RAM (Random Access Memory) is the computer's **temporary working memory** where programs and their data are stored while they are running. Its contents are erased when the computer is turned off.
 
-7.  Why is 'A' different from "A"?
-Ans: The difference between 'A' and "A" is that 'A' is stored in the variable as a character and "A" is stored as a string.
+---
 
-8.  Write five rules for naming variables.
-Ans: 1. No blank space in-between the words.
-     2. Case sensitive.
-     3. No starting with numbers.
-     4. No special characters except '_' 
-     5. No keywords known to the compiler.
+### 2. What is a variable?
 
-9.  What happens if you assign 3.14 to an int variable?
-Ans: An error will be shown.
+**Answer:**
+A variable is a **named storage location in memory** used to store a value of a specific data type.
 
-10. Why are meaningful variable names important?
-Ans: To understand and debug ( revision and fixing) easily by others.
+Example:
+
+```cpp
+int age = 20;
+```
+
+Here,
+
+* `int` → Data type
+* `age` → Variable name
+* `20` → Value
+
+---
+
+### 3. Why do we use variables instead of writing values directly?
+
+**Answer:**
+Variables allow us to store values that may change during a program. Instead of changing the same value everywhere in the code, we only update the variable once. This makes programs easier to write, read, maintain, and reuse.
+
+---
+
+### 4. Explain the difference between declaration, assignment, and initialization.
+
+**Declaration**
+Creates a variable.
+
+```cpp
+int age;
+```
+
+**Assignment**
+Gives a value to an already existing variable.
+
+```cpp
+age = 20;
+```
+
+**Initialization**
+Creates a variable and gives it its first value at the same time.
+
+```cpp
+int age = 20;
+```
+
+---
+
+### 5. Why is `x = x + 1` valid in programming but not in mathematics?
+
+**Answer:**
+In programming, the `=` operator means **assignment**, not mathematical equality.
+
+The computer:
+
+1. Reads the current value of `x`.
+2. Adds `1` to it.
+3. Stores the result back into `x`.
+
+Example:
+
+```cpp
+int x = 5;
+x = x + 1;
+```
+
+Now `x` becomes `6`.
+
+---
+
+### 6. What is the difference between `char` and `double`?
+
+**Answer:**
+
+* `char` stores a **single character**.
+* `double` stores **floating-point (decimal) numbers**.
+
+Examples:
+
+```cpp
+char grade = 'A';
+double pi = 3.1416;
+```
+
+---
+
+### 7. Why is `'A'` different from `"A"`?
+
+**Answer:**
+
+`'A'` is a **single character** (type `char`).
+
+```cpp
+char grade = 'A';
+```
+
+`"A"` is a **string** (a sequence of characters).
+
+```cpp
+"A"
+```
+
+Although it contains only one character, it is still considered a string.
+
+---
+
+### 8. Write five rules for naming variables.
+
+1. A variable name can contain letters, digits, and underscores (`_`).
+2. It cannot start with a digit.
+3. It cannot contain spaces.
+4. It cannot use C++ keywords (such as `int`, `return`, `double`, etc.).
+5. C++ is case-sensitive, so `age`, `Age`, and `AGE` are three different variable names.
+
+Examples:
+
+Valid:
+
+```cpp
+studentAge
+total_marks
+price2
+```
+
+Invalid:
+
+```cpp
+2age
+student age
+int
+```
+
+---
+
+### 9. What happens if you assign `3.14` to an `int` variable?
+
+**Answer:**
+The program usually compiles successfully, but the decimal part is **discarded (truncated)**.
+
+Example:
+
+```cpp
+int x = 3.14;
+```
+
+After assignment:
+
+```cpp
+x = 3;
+```
+
+Some compilers may show a warning, but it is **not** a compilation error.
+
+---
+
+### 10. Why are meaningful variable names important?
+
+**Answer:**
+Meaningful variable names make code easier to read, understand, debug, and maintain. They help both the programmer and others quickly understand the purpose of each variable.
+
+Example:
+
+Poor:
+
+```cpp
+int a;
+int b;
+```
+
+Better:
+
+```cpp
+int studentAge;
+double accountBalance;
+bool isLoggedIn;
+```
+
+---
+
+# Quick Summary
+
+* **RAM** → Temporary memory used while a program is running.
+* **Variable** → A named storage location in memory.
+* **Declaration** → Creates a variable.
+* **Assignment** → Gives a value to an existing variable.
+* **Initialization** → Creates a variable and assigns its first value.
+* **`char`** → Stores one character.
+* **`double`** → Stores decimal (floating-point) numbers.
+* **`'A'`** → Character.
+* **`"A"`** → String.
+* **Good variable names** improve code readability and maintenance.
+* **`int x = 3.14;`** stores `3` because the decimal part is truncated.
