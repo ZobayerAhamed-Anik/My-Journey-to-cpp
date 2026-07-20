@@ -1,0 +1,33 @@
+1.  What is RAM?
+Ans: RAM (Random Access Memory) is a computer memory to store data for the programme to run.
+
+2.  What is a variable?
+Ans: variable is a named place in the memory to store a specific type of data.
+
+3.  Why do we use variables instead of writing values directly?
+Ans: We use variables instead of writing values directly to avoid writing same instruction for different data values.
+
+4.  Explain the difference between declaration, assignment, and initialization.
+Ans: Declaration is the part where we declare which type of data we are going to store. Initialization is the part where we name the variable after declaration. Assignment is the part where we assign or give a supported value to that variable.
+
+5.  Why is x = x + 1 valid in programming but not in mathematics?
+Ans: Yes, it is. Used to increase the previous value by adding 1.
+
+6.  What is the difference between char and double?
+Ans: 'char' is a character data type which is used to store a single character while double is a datatype to store any number(int/float).
+
+7.  Why is 'A' different from "A"?
+Ans: The difference between 'A' and "A" is that 'A' is stored in the variable as a character and "A" is stored as a string.
+
+8.  Write five rules for naming variables.
+Ans: 1. No blank space in-between the words.
+     2. Case sensitive.
+     3. No starting with numbers.
+     4. No special characters except '_' 
+     5. No keywords known to the compiler.
+
+9.  What happens if you assign 3.14 to an int variable?
+Ans: An error will be shown.
+
+10. Why are meaningful variable names important?
+Ans: To understand and debug ( revision and fixing) easily by others.
